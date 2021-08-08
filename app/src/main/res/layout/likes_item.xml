@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginTop="20dp">
+
+    <ImageView
+        android:id="@+id/image_rv"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/oval"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_rv"
+        app:layout_constraintStart_toEndOf="@+id/image_rv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="sexy"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_marginStart="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/liked_you_rv"
+        app:layout_constraintStart_toEndOf="@+id/name_rv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/liked_your_photo_1h"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_marginStart="3dp"
+        />
+
+    <ImageView
+        android:id="@+id/image2_rv"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/oval"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
