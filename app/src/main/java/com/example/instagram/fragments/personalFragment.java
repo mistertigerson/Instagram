@@ -1,10 +1,12 @@
 package com.example.instagram.fragments;
 
 import android.annotation.SuppressLint;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -58,7 +60,24 @@ public class personalFragment extends Fragment {
             }
 
         }).attach();
+        tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                int iconTabed = ContextCompat.getColor(requireContext(), android.R.color.darker_gray);
+                tab.getIcon().setColorFilter(iconTabed, PorterDuff.Mode.SRC_IN);
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                int iconTabed = ContextCompat.getColor(requireContext(), android.R.color.black);
+                tab.getIcon().setColorFilter(iconTabed, PorterDuff.Mode.SRC_IN);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
     }
 
